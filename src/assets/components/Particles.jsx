@@ -76,7 +76,9 @@ export const ParticlesComponent = () => {
         },
         move: {
           enable: true,
-          direction: "top",
+          direction: "none",
+          random: true,
+          straight: false,
           speed: 0.5,
           straight: true,
         },
