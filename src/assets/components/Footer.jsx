@@ -4,6 +4,7 @@ import { faGithub, faLinkedin, faWhatsapp} from "@fortawesome/free-brands-svg-ic
 export function Footer() {
   return (
     <>
+
       <footer className='my-2 mt-7 mx-6 md:mx-20 lg:mx-14 xl:mx-16 2xl:mx-20'>
         <div className='w-full max-w-screen-xl p-4 md:py-8 dark:text-gray-400'>
           <div className='flex items-center justify-between'>

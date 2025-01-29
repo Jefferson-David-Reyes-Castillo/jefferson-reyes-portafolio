@@ -6,13 +6,19 @@ import { Presentacion } from "./assets/sections/Presentacion";
 import { Proyectos } from "./assets/sections/Proyectos";
 import { Formacion } from "./assets/sections/Formacion";
 import { Footer } from "./assets/components/Footer";
+import { ParticlesComponent } from "./assets/components/Particles";
+
+
+
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Nav />
+    <Nav/>
     <Presentacion />
     <Proyectos />
     <Formacion />
-    <Footer/>
+    <Footer />
+<ParticlesComponent/>
   </StrictMode>
 );

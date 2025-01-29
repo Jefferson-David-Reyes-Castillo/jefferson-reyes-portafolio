@@ -42,34 +42,36 @@ export function Nav() {
   }
 
   return (
-    <header className='flex justify-center items-center p-3 my-10'>
-      <div className='bg-slate-400 text-white dark:bg-gray-800 dark:text-gray-300 rounded-full px-6 py-3 shadow-xl'>
-        <nav className='flex justify-center items-center'>
-          {/* Menú de navegación */}
-          <ul className='flex gap-5 text-xs'>
-            {datos.map((item, index) => (
-              <li key={index} className=''>
-                <a
-                  title={item.title}
-                  href={item.href}
-                  className='[text-shadow:_0_2px_1px_rgb(0_0_0_/_25%)] font-bold hover:text-amber-300 dark:hover:text-amber-400 transition-transform dark:active:text-amber-400 active:underline'
+    <>
+      <header className='flex justify-center items-center p-3 my-10'>
+        <div className='bg-slate-400 text-white dark:bg-gray-800 dark:text-gray-300 rounded-full px-6 py-3 shadow-xl'>
+          <nav className='flex justify-center items-center'>
+            {/* Menú de navegación */}
+            <ul className='flex gap-5 text-xs'>
+              {datos.map((item, index) => (
+                <li key={index} className=''>
+                  <a
+                    title={item.title}
+                    href={item.href}
+                    className='[text-shadow:_0_2px_1px_rgb(0_0_0_/_25%)] font-bold hover:text-amber-300 dark:hover:text-amber-400 transition-transform dark:active:text-amber-400 active:underline'
+                  >
+                    {item.titulo}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <button
+                  title='Modo oscuro'
+                  onClick={handleChangeTheme}
+                  className='hover:text-orange-300 dark:hover:text-orange-600'
                 >
-                  {item.titulo}
-                </a>
+                  <FontAwesomeIcon icon={faMoon} />
+                </button>
               </li>
-            ))}
-            <li>
-              <button
-                title='Modo oscuro'
-                onClick={handleChangeTheme}
-                className='hover:text-orange-300 dark:hover:text-orange-600'
-              >
-                <FontAwesomeIcon icon={faMoon} />
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </>
   );
 }
